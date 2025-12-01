@@ -108,9 +108,10 @@ export default function App() {
   }, [isMintSuccess, receipt, pendingFortune, fortune]);
 
   const shareToFarcaster = () => {
+    const appUrl = "https://farcaster.xyz/miniapps/9ehldX_kietX/holiday-fortune-cookie";
     const text = mintedFortune
-      ? `Minted a Holiday Fortune Cookie on Arbitrum: "${mintedFortune}" 🍪🔮`
-      : "Crack a Holiday Fortune Cookie and mint your crypto pun on Arbitrum!";
+      ? `Minted a Holiday Fortune Cookie on Arbitrum: "${mintedFortune}" 🍪🔮 ${appUrl}`
+      : `Crack a Holiday Fortune Cookie and mint your crypto pun on Arbitrum! ${appUrl}`;
     sdk.actions.composeCast({
       text,
     });
