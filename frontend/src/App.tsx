@@ -110,8 +110,8 @@ export default function App() {
   const shareToFarcaster = () => {
     const appUrl = "https://farcaster.xyz/miniapps/9ehldX_kietX/holiday-fortune-cookie";
     const text = mintedFortune
-      ? `Minted a Holiday Fortune Cookie on Arbitrum: "${mintedFortune}" 🍪🔮 ${appUrl}`
-      : `Crack a Holiday Fortune Cookie and mint your crypto pun on Arbitrum! ${appUrl}`;
+      ? `Minted a Holiday Fortune Cookie on Arbitrum: "${mintedFortune}" 🍪🔮\n${appUrl}`
+      : `Crack a Holiday Fortune Cookie and mint your crypto pun on Arbitrum!\n${appUrl}`;
     sdk.actions.composeCast({
       text,
     });
