@@ -65,14 +65,14 @@ export function FortuneCookie({
                     alt="Fortune cookie closed"
                     className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 will-change-transform ${
                       hasCracked ? "opacity-0 scale-90" : "opacity-100 scale-105"
-                    } ${isCracking ? "crack-anim" : ""} ${!isConnected ? "opacity-80" : ""}`}
+                    } ${isCracking ? "crack-anim" : ""}`}
                   />
                   <img
                     src="/fortune_cookie_opened.svg"
                     alt="Fortune cookie opened"
                     className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 will-change-transform ${
                       hasCracked && !isCracking ? "opacity-100 scale-112 translate-y-1" : "opacity-0 scale-90 translate-y-3"
-                    } ${!isConnected ? "opacity-80" : ""}`}
+                    }`}
                   />
                 </div>
               </div>
