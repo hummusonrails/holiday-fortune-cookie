@@ -9,7 +9,7 @@
     "splashImageUrl": "https://holiday-fortune-cookie.onrender.com/splashImage.png",
     "splashBackgroundColor": "#194fb5",
     "webhookUrl": "https://holiday-fortune-cookie.onrender.com/api/webhook",
-    "subtitle": "Mint your fortune cookie onchain.",
+    "subtitle": "Mint your fortune",
     "description": "Discover your holiday fortune and mint it onchain.",
     "primaryCategory": "entertainment",
     "heroImageUrl": "https://holiday-fortune-cookie.onrender.com/screenshot.png",
