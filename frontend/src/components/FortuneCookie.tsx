@@ -30,6 +30,9 @@ export function FortuneCookie({
   mintPhase,
 }: Props) {
   const crackCta = hasCracked ? "Crack again" : "Crack your fortune cookie";
+  const showOpened = hasCracked && !isCracking;
+  const showClosed = !hasCracked || isCracking;
+  const renderOpened = hasCracked || isCracking;
 
   return (
     <div className="relative overflow-hidden rounded-3xl border border-cyan-300/15 bg-gradient-to-br from-[#0b1628] via-[#0f1d32] to-[#13283c] p-8 shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
@@ -64,16 +67,18 @@ export function FortuneCookie({
                     src="/fortune_cookie.svg"
                     alt="Fortune cookie closed"
                     className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 will-change-transform ${
-                      hasCracked ? "opacity-0 scale-90" : "opacity-100 scale-105"
+                      showClosed ? "opacity-100 scale-105" : "opacity-0 scale-90"
                     } ${isCracking ? "crack-anim" : ""}`}
                   />
-                  <img
-                    src="/fortune_cookie_opened.svg"
-                    alt="Fortune cookie opened"
-                    className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 will-change-transform ${
-                      hasCracked && !isCracking ? "opacity-100 scale-112 translate-y-1" : "opacity-0 scale-90 translate-y-3"
-                    }`}
-                  />
+                  {renderOpened && (
+                    <img
+                      src="/fortune_cookie_opened.svg"
+                      alt="Fortune cookie opened"
+                      className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 will-change-transform ${
+                        showOpened ? "opacity-100 scale-112 translate-y-1" : "opacity-0 scale-90 translate-y-3"
+                      }`}
+                    />
+                  )}
                 </div>
               </div>
 
