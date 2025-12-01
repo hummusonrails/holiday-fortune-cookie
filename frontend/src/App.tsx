@@ -109,11 +109,13 @@ export default function App() {
 
   const shareToFarcaster = () => {
     const appUrl = "https://farcaster.xyz/miniapps/9ehldX_kietX/holiday-fortune-cookie";
+    const imageUrl = `https://holiday-fortune-cookie.onrender.com/fortune_cookie_opened.png`;
     const text = mintedFortune
       ? `Minted a Holiday Fortune Cookie on Arbitrum: "${mintedFortune}" 🍪🔮\n${appUrl}`
       : `Crack a Holiday Fortune Cookie and mint your crypto pun on Arbitrum!\n${appUrl}`;
     sdk.actions.composeCast({
       text,
+      embeds: [imageUrl] as [string],
     });
   };
 
