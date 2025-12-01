@@ -1,0 +1,19 @@
+{
+    "frame": {
+      "version": "1",
+      "name": "Holiday Fortune Cookie",
+      "iconUrl": "https://your-app-url.example/holiday-cookie.svg",
+      "homeUrl": "https://your-app-url.example/",
+      "splashImageUrl": "https://your-app-url.example/holiday-cookie.svg",
+      "splashBackgroundColor": "#0b1728",
+      "subtitle": "Crack a festive cookie, reveal a crypto pun, and mint it on Arbitrum with a tiny creator fee.",
+      "description": "Break the cookie open inside Farcaster, reveal a holiday-themed Arbitrum pun, and mint it as an ERC721 that tips the creator.",
+      "primaryCategory": "entertainment",
+      "tags": ["arbitrum", "farcaster", "miniapp", "holiday", "fortune-cookie"],
+      "requiredChains": ["eip155:42161"],
+      "requiredCapabilities": [
+        "actions.composeCast",
+        "wallet.getEthereumProvider"
+      ]
+    }
+  }

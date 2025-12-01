@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Serif+SC:wght@600&display=swap");
+
+:root {
+  background-color: #090f1a;
+  color: #e5edf7;
+  font-family: "Space Grotesk", "Inter", system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  font-weight: 500;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #090f1a;
+}
+
+@keyframes crack-shake {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.05) rotate(-4deg);
+  }
+  40% {
+    transform: scale(1.08) rotate(4deg);
+  }
+  60% {
+    transform: scale(1.02) rotate(-3deg);
+  }
+  80% {
+    transform: scale(1.06) rotate(2deg);
+  }
+  100% {
+    transform: scale(0.95) rotate(0deg);
+  }
+}
+
+.crack-anim {
+  animation: crack-shake 0.55s ease-in-out forwards;
+}
